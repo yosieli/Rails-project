@@ -1,0 +1,52 @@
+<html>
+ <body>
+  <head>
+  <style>
+   label {
+     padding: 20px;
+     color: black;
+     margin-top: 50px;
+     size: 100px;
+    font-size: 20px;
+     
+     
+    }
+input{
+    display: inline;
+    
+
+}   
+.submit{
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 100px;
+} 
+  </style>
+  </head>
+
+    <form action='/homes' method="post">
+    <h1> CREATE HOMES </h2>
+      <div>
+          <label>style:</label>
+          <input type="text" name="style">
+      </div>
+      <div>
+        <label>year_complited:</label>
+        <input type="text" name="year_built">
+      </div>
+      <div>
+        <label> parking:</label>
+        <input type="text"  name="parking">
+      </div>
+      <div>
+        <label> price:</label>
+        <input type="text"  name="price">
+      </div>
+
+      <div>
+        <input  class= "submit" type="submit" value="submit" name="submit">
+      </div>
+
+    </form>
+  </body>  
+</html>    

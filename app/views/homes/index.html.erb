@@ -1,0 +1,43 @@
+<html>
+  <body>
+   <head>
+   <style>
+     .box {
+               display: block;
+               
+           }
+           
+           .card {
+               min-width: 150px;
+               flex: 1;
+               padding: 10px;
+               margin: 2;
+            
+               
+           }
+           
+               
+           
+   </style>
+   </head>
+    <h1>HOMES</h1>
+
+        
+            <div class="box">
+                <% @homes.each do | home|  %>
+                    <div class="card">
+                        <h3><%="#{home.style} #{home.year_built} #{home.parking} #{home.price} "%></h3>
+                    </div>        
+                <% end %>
+
+            
+        
+            </div>
+            <a class="button" href="/homes/new"> Create  New Homes</a>
+   </body>         
+</html>            
+
+        
+
+
+

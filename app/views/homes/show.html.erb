@@ -1,0 +1,77 @@
+<html>
+  <body>
+   <head>
+   <style>
+   input{
+    label {
+     padding: 20px;
+     color: black;
+     margin-top: 50px;
+     size: 100px;
+    font-size: 20px;
+     
+     
+    }
+input{
+    display: inline;
+    
+
+}   
+.submit{
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 100px;
+} 
+   }
+   a{
+     margin-top: 20px;
+     display: flex;
+
+   }
+   tr{
+      display: flex;
+      padding: 2px;
+      
+      
+
+   }
+   th{
+     display: flex;
+     padding:2px;
+    
+   }
+   input{
+     font-size: 100px;
+   }
+   </style>
+   </head>
+   
+      <table>
+
+        <tr>
+          <th>Style</th>
+          <th>Year_built</th>
+          <th>Parking</th>
+          <th>Price</th>
+
+        </tr>
+        <tr>
+          <td><%= @homes.style %></td>
+          <td><%= @homes.year_built %></td>
+          <td><%= @homes.parking %></td>
+          <td><%= @homes.price%></td>
+
+        </tr>
+      <table>
+   </body> 
+</html>
+
+
+<a class="button" href="/homes/<%= @homes.id %>/edit">Edit Homes</a><br>
+<a class="button" href="/homes"> Create Homes </a><br>
+ 
+
+<form action='/homes/<%= @homes.id %>' method="post">
+<input type="hidden" name="_method" value="delete" />
+<input type="submit" value="delete">
+</form>

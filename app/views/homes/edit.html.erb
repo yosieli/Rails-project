@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <%= stylesheet_link_tag "application" %>
+    <head>
+    <body>
+            <form action='/homes/<%= @homes.id %>' method="post">
+                    <input type="hidden" name="_method" value="patch" />
+                    <h1> EDIT HOMES </h2>
+                <div>
+                    <label >style:</label>
+                    <input type="text" name="homes[style]">
+                </div>
+                <div>
+                    <label>year_built:</label>
+                    <input type="text" name="homes[year_completed]">
+                </div>
+                <div>
+                    <label> parking:</label>
+                    <input type="text"  name="homes[parking]">
+                </div>
+                <div>
+                    <label> price:</label>
+                    <input type="text"  name="homes[price]">
+                </div>
+
+                <div>
+                    <input  class="submit" type="submit" value="submit" name="submit">
+                </div>
+
+            </form>
+
+            <a class="button" href="/homes/new"> Create  New Homes</a>
+        </body>    
+  
+ </html>
