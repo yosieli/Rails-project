@@ -18,7 +18,7 @@ class HomesController < ActionController::Base
     def update
        @homes = Home.find(params[:id])
         @homes.update(homes_params[:homes])
-        redirect_to homes_path
+        redirect_to homes_path(@homes)
     end
 
     def show 
@@ -37,7 +37,7 @@ class HomesController < ActionController::Base
     def destroy
         @homes = Home.find(params[:id])
         @homes.destroy
-        redirect_to homes_path
+        redirect_to homes_path(@homes)
     end
 
     def homes_params

@@ -1,39 +1,51 @@
 <html>
   <body>
-   <head>
-   <style>
-     .box {
-               display: block;
-               
-           }
-           
-           .card {
-               min-width: 150px;
-               flex: 1;
-               padding: 10px;
-               margin: 2;
-            
-               
-           }
-           
-               
-           
-   </style>
-   </head>
+    <head>
+       <%= stylesheet_link_tag "application" %> 
+    </head>
     <h1>HOMES</h1>
+         <div class="index">
+                   <div>
+                        <table>
 
-        
-            <div class="box">
+                            <tr>
+                            <th>Style</th>
+                            <th>Year_built</th>
+                            <th>Parking</th>
+                            <th>Price</th>
+
+                            </tr>
+                        </table>    
+                    </div>
+            <div >
+              
                 <% @homes.each do | home|  %>
-                    <div class="card">
-                        <h3><%="#{home.style} #{home.year_built} #{home.parking} #{home.price} "%></h3>
-                    </div>        
+                  
+                        <div >
+                           
+                                    <h3><%="#{home.style}"%></h3>
+                                    <h3 ><%="#{home.year_built}"%></h3>
+                                    <h3 ><%="#{home.parking}"%></h3>
+                                    <h3 ><%="#{home.price}"%></h3>
+
+                                     
+                        </div>   
+                    
+                   <a href="<%= edit_home_path(home.id) %>">Edit</a> 
+                   
+                   
+                  
                 <% end %>
 
             
         
             </div>
+        </div>    
             <a class="button" href="/homes/new"> Create  New Homes</a>
+            
+            
+            <a class="button" href="/homes/show">show Homes </a>
+
    </body>         
 </html>            
 

@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Home.destroy_all
 
 home1 = Home.create( style: 'vila', year_built: 2016, parking: '2 spaces',price: 100000)
 home2 = Home.create( style: 'modern', year_built: 2000, parking: '4 spaces',price: 500000)
